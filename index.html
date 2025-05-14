@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final - Join the Waitlist</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEF9EC; /* Light yellow background */
+            color: #1f2937;
+        }
+        .gradient-bg {
+            background: #E76F51; /* Terracotta color */
+        }
+        .btn-primary {
+            background-color: #E76F51; /* Terracotta */
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #D65F41; /* Slightly darker terracotta for hover */
+        }
+        .text-accent {
+            color: #E76F51; /* Terracotta text */
+        }
+    </style>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-white shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex justify-between items-center">
+                    <div class="font-bold text-2xl text-accent">Final</div>
+                    <div>
+                        <a href="#features" class="mr-6 text-gray-600 hover:text-accent">Features</a>
+                        <a href="#about" class="text-gray-600 hover:text-accent">About</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <main class="flex-grow">
+            <div class="relative">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+                    <div class="md:flex md:items-center md:space-x-8">
+                        <div class="md:w-full mb-10 md:mb-0">
+                            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Peace of Mind, Planned Ahead</h1>
+                            <p class="text-xl text-gray-600 mb-8">Secure your legacy and ensure your wishes are honored with our comprehensive end-of-life planning platform.</p>
+                            
+                            <!-- Waitlist Form -->
+                            <div class="bg-white p-6 rounded-lg shadow-md">
+                                <h2 class="text-2xl font-bold mb-4">Be the first to know when we launch</h2>
+                                <p class="text-gray-600 mb-4">Join our waitlist to get early access and exclusive offers.</p>
+                                
+                                <form action="https://formspree.io/f/xanoayzq" method="POST">
+                                    <input 
+                                        type="email" 
+                                        id="email"
+                                        name="email" 
+                                        placeholder="Enter your email address" 
+                                        required
+                                        class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:ring-accent focus:border-accent"
+                                    >
+                                    <button 
+                                        type="submit" 
+                                        class="btn-primary px-6 py-2 rounded-md transition whitespace-nowrap"
+                                    >
+                                        Join Waitlist
+                                    </button>
+                                </form>
+                                
+                                <!-- Success Message (hidden by default) -->
+                                <div id="successMessage" class="hidden mt-4 p-3 bg-green-100 text-green-800 rounded-md">
+                                    <p>Thank you for joining our waitlist! We'll notify you when Final launches.</p>
+                                </div>
+                                
+                                <!-- Error Message (hidden by default) -->
+                                <div id="errorMessage" class="hidden mt-4 p-3 bg-red-100 text-red-800 rounded-md">
+                                    <p>Something went wrong. Please try again later.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div id="features" class="bg-white py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-gray-900">Everything you need for end-of-life planning</h2>
+                        <p class="mt-4 text-lg text-gray-600">Our platform provides all the tools you need to organize your affairs and communicate your wishes.</p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="w-12 h-12 gradient-bg rounded-md flex items-center justify-center text-white mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Secure Document Storage</h3>
+                            <p class="text-gray-600">Store your important end-of-life and estate planning documents securely with end-to-end encryption and controlled access.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="w-12 h-12 gradient-bg rounded-md flex items-center justify-center text-white mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Digital Will Creation</h3>
+                            <p class="text-gray-600">Create a last will and testament and living will that can be downloaded, printed, and signed.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="w-12 h-12 gradient-bg rounded-md flex items-center justify-center text-white mb-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Trusted Contacts</h3>
+                            <p class="text-gray-600">Designate trusted individuals who can access your information when needed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div id="about" class="py-16">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-gray-900">Why Choose Final?</h2>
+                        <p class="mt-4 text-lg text-gray-600">We're building the most comprehensive and user-friendly end-of-life planning platform.</p>
+                    </div>
+                    
+                    <div class="bg-white shadow-xl rounded-lg overflow-hidden">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-8 md:p-12">
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                                <p class="text-gray-600 mb-6">At Final, we believe everyone deserves peace of mind knowing their wishes will be respected and their loved ones protected. We're making end-of-life planning accessible, comprehensive, and secure.</p>
+                                <h3 class="text-2xl font-bold text-gray-900 mb-4">Join Our Journey</h3>
+                                <p class="text-gray-600">By joining our waitlist, you'll be among the first to experience Final and help shape its future. We value your input and look forward to serving you.</p>
+                            </div>
+                            <div class="md:w-1/2 bg-gray-100 flex items-center justify-center p-8">
+                                <div class="text-center">
+                                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Ready to secure your legacy?</h3>
+                                    <a href="#" class="scroll-to-form inline-block btn-primary px-6 py-3 rounded-md transition">Join the Waitlist Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="md:flex md:justify-between md:items-center">
+                    <div>
+                        <div class="font-bold text-2xl text-white mb-2">Final</div>
+                        <p class="text-gray-400">Peace of Mind, Planned Ahead</p>
+                    </div>
+                    <div class="mt-4 md:mt-0">
+                        <div class="text-sm text-gray-400">&copy; 2025 Final. All rights reserved.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script for form submission and scroll functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form submission
+            const waitlistForm = document.getElementById('waitlistForm');
+            const emailInput = document.getElementById('email');
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            waitlistForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = emailInput.value.trim();
+                
+                if (!email || !isValidEmail(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+                
+                // Here you would normally send the data to your backend or third-party service
+                // This is a simulation for demonstration purposes
+                submitToThirdParty(email)
+                    .then(() => {
+                        // Show success message
+                        successMessage.classList.remove('hidden');
+                        errorMessage.classList.add('hidden');
+                        emailInput.value = '';
+                        
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            successMessage.classList.add('hidden');
+                        }, 5000);
+                    })
+                    .catch(error => {
+                        // Show error message
+                        errorMessage.classList.remove('hidden');
+                        successMessage.classList.add('hidden');
+                        
+                        console.error('Error submitting form:', error);
+                        
+                        // Hide error message after 5 seconds
+                        setTimeout(() => {
+                            errorMessage.classList.add('hidden');
+                        }, 5000);
+                    });
+            });
+            
+            // Function to validate email format
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Function to simulate sending data to a third-party service
+            // In a real implementation, this would be replaced with an actual API call
+            function submitToThirdParty(email) {
+                return new Promise((resolve, reject) => {
+                    // Simulate API call with a timeout
+                    setTimeout(() => {
+                        // Simulate a 90% success rate
+                        if (Math.random() < 0.9) {
+                            console.log('Email submitted successfully:', email);
+                            resolve();
+                        } else {
+                            reject(new Error('Simulated server error'));
+                        }
+                    }, 1000);
+                });
+            }
+            
+            // Scroll to form when "Join the Waitlist Now" button is clicked
+            const scrollButtons = document.querySelectorAll('.scroll-to-form');
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    waitlistForm.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        emailInput.focus();
+                    }, 800);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
